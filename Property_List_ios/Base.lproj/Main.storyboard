@@ -76,13 +76,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="이름" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kj5-8y-JcO">
-                                                    <rect key="frame" x="16" y="11" width="58" height="48"/>
+                                                    <rect key="frame" x="16" y="11" width="59" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="pjh" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qMb-kH-3bv">
-                                                    <rect key="frame" x="296" y="11" width="63" height="48"/>
+                                                    <rect key="frame" x="279" y="10" width="60" height="48"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -90,8 +90,7 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="qMb-kH-3bv" secondAttribute="bottom" constant="10.5" id="2cY-sE-UWJ"/>
-                                                <constraint firstAttribute="trailing" secondItem="qMb-kH-3bv" secondAttribute="trailing" constant="16" id="3AF-7u-YAF"/>
-                                                <constraint firstItem="kj5-8y-JcO" firstAttribute="centerY" secondItem="qMb-kH-3bv" secondAttribute="centerY" id="Hym-bo-uAK"/>
+                                                <constraint firstAttribute="trailing" secondItem="qMb-kH-3bv" secondAttribute="trailing" constant="36" id="3AF-7u-YAF"/>
                                                 <constraint firstAttribute="bottom" secondItem="kj5-8y-JcO" secondAttribute="bottom" constant="10.5" id="IPN-dB-mPs"/>
                                                 <constraint firstItem="kj5-8y-JcO" firstAttribute="leading" secondItem="TjD-DI-tys" secondAttribute="leading" constant="16" id="NMo-Dc-YRn"/>
                                                 <constraint firstItem="qMb-kH-3bv" firstAttribute="top" secondItem="TjD-DI-tys" secondAttribute="top" constant="11" id="YNb-5h-clU"/>
@@ -99,9 +98,6 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <gestureRecognizers/>
-                                        <connections>
-                                            <outletCollection property="gestureRecognizers" destination="sz8-ae-CI6" appends="YES" id="Enw-yn-DxB"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="f1v-pk-dAE">
                                         <rect key="frame" x="0.0" y="140" width="375" height="70"/>
@@ -117,21 +113,24 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BGQ-yr-6N5">
-                                                    <rect key="frame" x="244" y="21" width="115" height="29"/>
+                                                    <rect key="frame" x="240" y="21" width="119" height="29"/>
                                                     <segments>
                                                         <segment title="남"/>
                                                         <segment title="여"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="changeGender:" destination="kIW-u3-iFw" eventType="valueChanged" id="MHZ-NF-d6u"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="byq-Er-0hI" firstAttribute="top" secondItem="xcD-8d-DMS" secondAttribute="top" constant="11" id="2fo-wb-Y7P"/>
-                                                <constraint firstItem="BGQ-yr-6N5" firstAttribute="leading" secondItem="xcD-8d-DMS" secondAttribute="leading" constant="244" id="BEs-fN-CNu"/>
                                                 <constraint firstItem="byq-Er-0hI" firstAttribute="leading" secondItem="xcD-8d-DMS" secondAttribute="leading" constant="16" id="DCg-K9-qHc"/>
+                                                <constraint firstAttribute="trailing" secondItem="BGQ-yr-6N5" secondAttribute="trailing" constant="16" id="EHq-Ts-Y7S"/>
                                                 <constraint firstItem="BGQ-yr-6N5" firstAttribute="top" secondItem="xcD-8d-DMS" secondAttribute="top" constant="21" id="N6K-nq-AzY"/>
+                                                <constraint firstItem="BGQ-yr-6N5" firstAttribute="leading" secondItem="byq-Er-0hI" secondAttribute="trailing" constant="166" id="dJj-s9-KQp"/>
                                                 <constraint firstAttribute="bottom" secondItem="BGQ-yr-6N5" secondAttribute="bottom" constant="20.5" id="l7G-Iu-Qoc"/>
                                                 <constraint firstAttribute="bottom" secondItem="byq-Er-0hI" secondAttribute="bottom" constant="10.5" id="lhQ-qS-Goc"/>
-                                                <constraint firstItem="byq-Er-0hI" firstAttribute="centerY" secondItem="BGQ-yr-6N5" secondAttribute="centerY" id="p30-fC-LEa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -150,6 +149,9 @@
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hqj-va-6Ie">
                                                     <rect key="frame" x="303" y="19" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="changeMarried:" destination="kIW-u3-iFw" eventType="valueChanged" id="IpF-x0-sRv"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
@@ -173,6 +175,9 @@
                     <navigationItem key="navigationItem" title="사용자정보" id="wxK-wl-VGD"/>
                     <connections>
                         <outlet property="account" destination="09j-VH-lXx" id="WbY-QX-hyJ"/>
+                        <outlet property="gender" destination="BGQ-yr-6N5" id="xG7-xS-olG"/>
+                        <outlet property="married" destination="hqj-va-6Ie" id="Bx3-DH-1mf"/>
+                        <outlet property="name" destination="qMb-kH-3bv" id="gcJ-Xd-EWL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BvE-hp-xHd" userLabel="First Responder" sceneMemberID="firstResponder"/>
